@@ -1,0 +1,6 @@
+/* CSS = apresentação visual ao cliente */
+
+body {
+  color: red;
+  /* body é um seletor que procura o mesmo no documento html, e backgraud é uma declaração que dita as propriedades de um código html */
+}
