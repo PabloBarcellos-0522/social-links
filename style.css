@@ -7,6 +7,7 @@ body {
   /*color, image, repeat, position, size*/
   background: var(--background) no-repeat top center/cover;
   height: 100vh;
+  overflow: hidden;
 }
 
 :root {
@@ -16,7 +17,7 @@ body {
   --background-caixa: rgba(255, 255, 255, 0.04);
   --social: rgba(255, 255, 255, 0.2);
   --switch: url(./assets/moon-stars.svg);
-  --oculos: -300px;
+  --oculos: -400px;
   --transição: none;
 }
 
@@ -226,9 +227,33 @@ footer {
 @media (min-width: 700px) {
   :root {
     --background: url(./assets/bg-desktop.jpg);
+    #borrao {
+      border-radius: 50%;
+      height: 700px;
+      width: 700px;
+      bottom: 650px;
+      right: 200px;
+      margin: auto;
+      position: relative;
+      z-index: -10;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
   }
 
   .light {
     --background: url(./assets/bg-desktop-light.jpg);
+    #borrao {
+      border-radius: 50%;
+      height: 700px;
+      width: 700px;
+      bottom: 650px;
+      right: 200px;
+      margin: auto;
+      position: relative;
+      z-index: -10;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.07);
+    }
   }
 }
