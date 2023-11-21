@@ -249,10 +249,10 @@ footer {
     --background: url(./assets/bg-desktop-light.jpg);
     #borrao {
       border-radius: 50%;
-      height: 700px;
-      width: 700px;
-      bottom: 650px;
-      right: 200px;
+      height: 750px;
+      width: 750px;
+      bottom: 750px;
+      right: 0;
       margin: auto;
       position: relative;
       z-index: -10;
