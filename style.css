@@ -19,6 +19,7 @@ body {
   --switch: url(./assets/moon-stars.svg);
   --oculos: -400px;
   --transição: none;
+  --background-caixa-borrao: rgba(255, 255, 255, 0.1);
 }
 
 .light {
@@ -29,8 +30,9 @@ body {
   --social: rgba(0, 0, 0, 0.2);
   --switch: url(./assets/sun.svg);
   --oculos: -10px;
-  --oculos2: -90px;
-  --transição: all 0.3s;
+  --oculos2: -95px;
+  --transição: all 0.2s;
+  --background-caixa-borrao: rgba(0, 0, 0, 0.15);
 }
 
 body * {
@@ -111,23 +113,24 @@ ion-icon#coração {
 
 #button1 {
   /*border: 1px solid green;*/
-  padding: 25px;
+  padding: 16px;
   position: absolute;
   z-index: 2;
   transform: translateY(-50%);
   top: 50%;
-  left: -10px;
+  left: 0px;
   border-radius: 50%;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 #button1:hover {
-  background: var(--social);
+  /*background: var(--social);*/
+  outline: 10px solid var(--background-caixa);
 }
 
 .light #button1 {
   right: 0;
-  left: 23px;
+  left: 32px;
 }
 
 #switch button {
@@ -142,7 +145,7 @@ ion-icon#coração {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .light #switch button {
@@ -229,15 +232,16 @@ footer {
     --background: url(./assets/bg-desktop.jpg);
     #borrao {
       border-radius: 50%;
-      height: 700px;
-      width: 700px;
-      bottom: 650px;
-      right: 200px;
+      height: 750px;
+      width: 750px;
+      bottom: 750px;
+      right: 0;
       margin: auto;
       position: relative;
       z-index: -10;
       backdrop-filter: blur(10px);
       background: rgba(255, 255, 255, 0.05);
+      box-shadow: 4px 4px 4px 4px var(--background-caixa-borrao);
     }
   }
 
@@ -254,6 +258,14 @@ footer {
       z-index: -10;
       backdrop-filter: blur(10px);
       background: rgba(0, 0, 0, 0.07);
+      box-shadow: 5px 5px 5px 5px var(--background-caixa-borrao);
     }
+  }
+  /*legenda*/
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+    top: -9px;
   }
 }
