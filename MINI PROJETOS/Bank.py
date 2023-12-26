@@ -1,9 +1,11 @@
 import time
 import sqlite3
+import os
+import pdb
 
-conexao = sqlite3.connect('./MINI PROJETOS/bancodedados.db')
+# conexao = sqlite3.connect('./MINI PROJETOS/bancodedados.db')
+conexao = sqlite3.connect('c:\\Users\\pablo\\OneDrive\\Desktop\\Programação\\social-links\\Projetos\\MINI PROJETOS\\bancodedados.db')
 cursor = conexao.cursor()
-
 
 #ID_senhas: 1, usuario: pablo, senha: 123 
 
@@ -127,9 +129,9 @@ while execucao:
       conexao.commit()
 
       time.sleep(1.5)
-      print(f"\n {valores} reais sacados com sucesso!!!, seu saldo agora é de: {saldo_total} reias.")
-      time.sleep(2)
       print(f"\n {valores} depositados com sucesso!!!, seu saldo agora é de: {saldo_total} reias.")
+      time.sleep(2)
+      
 
       print('\nquer continuar utilizando o BANK-Pablo?')
       continuar = input()
@@ -151,13 +153,14 @@ while execucao:
         for linha in cursor.fetchall():
           return list(linha)[4]
       
-      if saldo() > valores:
+      if int(saldo()) > int(valores):
 
         saldo_total = int(saldo()) - int(valores)
         
         cursor.execute("UPDATE senhas SET saldo = {} WHERE ID = {}".format(saldo_total, id()))
         conexao.commit()
       print('loading...')
+
       time.sleep(1.5)
       print(f"\n {valores} reais sacados com sucesso!!!, seu saldo agora é de: {saldo_total} reias.")
       time.sleep(2)
