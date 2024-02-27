@@ -12,7 +12,8 @@ body {
 
 :root {
   --cor: white;
-  --background: url(./assets/bg-mobile.jpg);
+  /* --background: url(./assets/bg-mobile.jpg); */
+  --background: url(./assets/mobile_bg_black.jpg);
   --border: rgba(255, 255, 255, 0.5);
   --background-caixa: rgba(255, 255, 255, 0.04);
   --social: rgba(255, 255, 255, 0.2);
@@ -193,7 +194,7 @@ ul li a {
 
 ul li a:hover {
   background: var(--background-caixa);
-  border: 1.5px solid var(--cor);
+  border: 1px solid var(--cor);
 }
 
 /*social links*/
@@ -206,7 +207,7 @@ ul li a:hover {
   height: 24px;
   width: 24px;
   /*ou font-size: 24px;*/
-  padding: 16px 15px 16px 15px;
+  padding: 16px 16px 16px 16px;
   transition: background 0.3s;
   border-radius: 50%;
 }
@@ -229,34 +230,36 @@ footer {
 /*media queries*/
 @media (min-width: 700px) {
   :root {
-    --background: url(./assets/bg-desktop.jpg);
+    /* --background: url(./assets/bg-desktop.jpg); */
+    --background: url(./assets/teste.jpg);
     #borrao {
       border-radius: 50%;
-      height: 700px; /* 700px */
-      width: 700px; /* 700px */
-      bottom: 690px; /* 690px */
+      height: 680px;
+      width: 680px;
+      bottom: 640px;
       right: 0;
       margin: auto;
       position: relative;
       z-index: -10;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
       background: rgba(255, 255, 255, 0.05);
       box-shadow: 4px 4px 4px 4px var(--background-caixa-borrao);
     }
   }
 
   .light {
-    --background: url(./assets/bg-desktop-light.jpg);
+    /* --background: url(./assets/bg-desktop-light.jpg); */
+    --background: url(./assets/white_bg.jpg);
     #borrao {
       border-radius: 50%;
-      height: 700px;
-      width: 700px;
-      bottom: 690px;
+      height: 680px;
+      width: 680px;
+      bottom: 640px;
       right: 0;
       margin: auto;
       position: relative;
       z-index: -10;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(5px);
       background: rgba(0, 0, 0, 0.07);
       box-shadow: 5px 5px 5px 5px var(--background-caixa-borrao);
     }
@@ -264,7 +267,7 @@ footer {
   /*legenda*/
   footer {
     text-align: center;
-    padding: 24px;
+    padding: 10px 24px 24px;
     font-size: 14px;
     top: -9px;
   }
